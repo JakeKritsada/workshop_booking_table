@@ -1,6 +1,8 @@
 <?php
-// navbar.php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
+// navbar.php - บรรทัดแรกสุดต้องเป็นแท็กเปิด PHP เท่านั้น ห้ามมีบรรทัดว่างข้างบน
+if (!headers_sent() && session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $logged_in = !empty($_SESSION['user_id']);
 $phone     = $logged_in ? $_SESSION['phone'] : null;
@@ -8,6 +10,7 @@ $role      = $logged_in ? ($_SESSION['role'] ?? 'user') : null;
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbar-glow">
+    </nav>
   <div class="container-fluid">
     
     <!-- LOGO -->
