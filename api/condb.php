@@ -8,11 +8,15 @@ $password = 'kkUyvAYbFDhhe0IL'; // ใส่รหัสผ่านที่ค
 $dbname   = 'workshop_booking'; // ชื่อฐานข้อมูลที่เราสร้างไว้
 $port     = 4000; // คัดลอกจากช่อง Port
 
-// เชื่อมต่อฐานข้อมูล (สำหรับ TiDB ต้องระบุ Port 4000 ด้วย)
-$conn = new mysqli($hostname, $username, $password, $dbname, $port);
+// 1. สร้างตัวแปรเชื่อมต่อ mysqli
+$conn = mysqli_init();
 
-if ($conn->connect_error) {
-    die('เชื่อมต่อฐานข้อมูลไม่สำเร็จ: ' . $conn->connect_error);
+// 2. ตั้งค่าให้ใช้ SSL (สำคัญมากสำหรับ TiDB Cloud)
+$conn->ssl_set(NULL, NULL, NULL, NULL, NULL);
+
+// 3. ทำการเชื่อมต่อจริง
+if (!$conn->real_connect($hostname, $username, $password, $dbname, $port)) {
+    die('เชื่อมต่อฐานข้อมูลไม่สำเร็จ: ' . mysqli_connect_error());
 }
 
 // ตั้งค่าภาษาไทย
