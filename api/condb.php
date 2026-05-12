@@ -1,15 +1,16 @@
 <?php
-// condb.php — เชื่อมต่อฐานข้อมูลครั้งเดียว แบบ OOP
-
-// ป้องกัน include ซ้ำ
 if (isset($conn)) return;
 
-$conn = new mysqli('localhost', 'root', '', 'workshop_booking_table');
+// ใช้ข้อมูลจาก InfinityFree ที่คุณแคปรูปมาให้ผมก่อนหน้านี้
+$hostname = 'sql307.infinityfree.com';
+$username = 'if0_41897370';
+$password = 'FEKiMjQhXzA2';
+$dbname   = 'if0_41897370_workshop_booking_table';
 
-// ตรวจสอบการเชื่อมต่อ
+$conn = new mysqli($hostname, $username, $password, $dbname);
+
 if ($conn->connect_error) {
     die('เชื่อมต่อฐานข้อมูลไม่สำเร็จ: ' . $conn->connect_error);
 }
 
-// ตั้งค่า charset รองรับภาษาไทย
 $conn->set_charset('utf8mb4');
