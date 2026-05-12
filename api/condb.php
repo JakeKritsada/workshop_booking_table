@@ -9,10 +9,8 @@ $port     = 4000;
 
 $conn = mysqli_init();
 
-// บรรทัดสำคัญที่ TiDB บังคับ
-$conn->ssl_set(NULL, NULL, NULL, NULL, NULL);
-
-if (!$conn->real_connect($hostname, $username, $password, $dbname, $port)) {
+// บรรทัดที่ปรับปรุงใหม่: เพิ่มการระบุ Flag MYSQLI_CLIENT_SSL
+if (!$conn->real_connect($hostname, $username, $password, $dbname, $port, NULL, MYSQLI_CLIENT_SSL)) {
     die('เชื่อมต่อฐานข้อมูลไม่สำเร็จ: ' . mysqli_connect_error());
 }
 
