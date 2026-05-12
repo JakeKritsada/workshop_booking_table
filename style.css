@@ -1,0 +1,182 @@
+/* ========================================
+   DEEP D HOUSE — DESIGN SYSTEM
+   ======================================== */
+
+:root {
+  --gold: #f5a524;
+  --gold-2: #d9901d;
+  --bg: #0e0e0e;
+  --card: #151515;
+}
+
+/* ========================================
+   BODY
+   ======================================== */
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Kanit', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar-dark {
+  background: #000;
+}
+
+/* เงาทอง */
+.navbar-glow {
+  position: relative;
+  z-index: 1030;
+  box-shadow: 0 4px 20px rgba(245, 165, 36, 0.25);
+  border-bottom: 1px solid rgba(245, 165, 36, 0.15);
+}
+
+/* เส้นทองเรืองแสง */
+.navbar-glow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5a524, transparent);
+  box-shadow: 0 0 10px rgba(245, 165, 36, 0.7);
+}
+
+/* LOGO */
+.navbar-brand {
+  font-weight: 800;
+  color: var(--gold) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+  color: var(--gold-2) !important;
+}
+.navbar-dark .nav-link {
+  color: #fff !important;
+  font-weight: 800; /* 🚩 ปรับจาก 600 เป็น 800 เพื่อให้หนาเท่า Logo */
+  transition: color 0.25s;
+  letter-spacing: 0.3px; /* เพิ่มระยะห่างตัวอักษรนิดหน่อยเพื่อให้ดูอ่านง่ายขึ้นเมื่อตัวหนา */
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+  color: var(--gold) !important;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #000;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--gold-2);
+  border-color: var(--gold-2);
+  color: #000;
+}
+
+.btn-outline-light:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #000;
+}
+
+/* ========================================
+   CARDS
+   ======================================== */
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(245, 165, 36, 0.2);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+  background: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(245, 165, 36, 0.25);
+  box-shadow: 0 -6px 24px rgba(245, 165, 36, 0.25);
+}
+
+/* ========================================
+   TABLES
+   ======================================== */
+
+.table-dark {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table th {
+  color: var(--gold);
+  font-weight: 700;
+  border-bottom: 2px solid rgba(245, 165, 36, 0.2);
+}
+
+.table td {
+  border-color: rgba(255, 255, 255, 0.05);
+  vertical-align: middle;
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+
+.form-control {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.25rem rgba(245, 165, 36, 0.25);
+}
+
+label {
+  color: var(--gold-2);
+  font-weight: 600;
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+
+.text-gold {
+  color: var(--gold) !important;
+}
+
+.bg-card {
+  background: var(--card) !important;
+}
+
