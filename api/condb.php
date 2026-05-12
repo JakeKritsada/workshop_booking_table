@@ -2,9 +2,9 @@
 if (isset($conn)) return;
 
 // นำข้อมูลจากหน้าจอ TiDB ของคุณมาใส่ตรงนี้
-$hostname = 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com'; // คัดลอกจากช่อง Host
+$hostname = 'gateway01.ap-southeast-1.prod.alicloud.tidbcloud.com'; // คัดลอกจากช่อง Host
 $username = '2sPFaH4bRb7ouXQ.root'; // คัดลอกจากช่อง User
-$password = 'รหัสผ่านที่คุณตั้งไว้ตอนกด Reset Password'; // ใส่รหัสผ่านที่คุณตั้งเอง
+$password = 'kkUyvAYbFDhhe0IL'; // ใส่รหัสผ่านที่คุณตั้งเอง
 $dbname   = 'workshop_booking'; // ชื่อฐานข้อมูลที่เราสร้างไว้
 $port     = 4000; // คัดลอกจากช่อง Port
 
