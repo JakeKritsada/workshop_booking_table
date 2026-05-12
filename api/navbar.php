@@ -1,5 +1,7 @@
 <?php
-// navbar.php
+// navbar.php - ต้องเริ่มที่บรรทัดที่ 1 ของไฟล์เท่านั้น ห้ามมีบรรทัดว่างข้างบน
+ob_start(); // เพิ่มการจัดการ Buffer เพื่อป้องกัน Header Error
+
 if (session_status() === PHP_SESSION_NONE) { 
     session_start(); 
 }
