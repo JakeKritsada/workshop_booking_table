@@ -1,12 +1,13 @@
 <?php
 // navbar.php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
+if (session_status() === PHP_SESSION_NONE) { 
+    session_start(); 
+}
 
 $logged_in = !empty($_SESSION['user_id']);
 $phone     = $logged_in ? $_SESSION['phone'] : null;
 $role      = $logged_in ? ($_SESSION['role'] ?? 'user') : null;
 ?>
-
 <nav class="navbar navbar-expand-lg navbar-dark navbar-glow">
   <div class="container-fluid">
     
