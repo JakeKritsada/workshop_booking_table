@@ -153,9 +153,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="prototype-badge text-uppercase">UI/UX Prototype</div>
         <h1 class="display-4 fw-bold mb-3">ระบบจองโต๊ะของร้านดิบดี</h1>
         <p class="lead mb-4 mx-auto" style="max-width: 700px; color: #ccc;">
-          เว็บไซต์นี้จัดทำขึ้นเพื่อ **ยกตัวอย่างและรูปแบบการใช้งาน (UI/UX Prototype)** เท่านั้น<br>
-          <span class="small text-warning">* ข้อมูลการทำงานจำลองขึ้นเพื่อแสดงผลในส่วนของโครงสร้างระบบ</span>
-        </p>
+    เว็บไซต์นี้จัดทำขึ้นเพื่อ <strong>สาธิตทักษะการออกแบบและพัฒนา (UI/UX Portfolio)</strong> 
+    สำหรับประกอบการพิจารณาเข้าทำงานเท่านั้น<br>
+    <span class="small text-warning">* ระบบจำลองโครงสร้างและประสบการณ์ผู้ใช้ (User Experience Demonstration)</span>
+</p>
 
         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
           <a class="btn btn-warning btn-lg px-4 fw-bold" href="detailtable.php">ดูรายละเอียดโต๊ะ</a>
